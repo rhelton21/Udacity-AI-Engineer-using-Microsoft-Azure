@@ -1,0 +1,37 @@
+{
+  "@odata.context": "https://uda-cog-search.search.windows.net/$metadata#skillsets/$entity",
+  "@odata.etag": "\"0x8DBEF137B43A892\"",
+  "name": "courses-skillset",
+  "description": "Skillset created from the portal. skillsetName: courses-skillset; contentField: description; enrichmentGranularity: document; knowledgeStoreStorageAccount: ;",
+  "skills": [
+    {
+      "@odata.type": "#Microsoft.Skills.Text.KeyPhraseExtractionSkill",
+      "name": "#1",
+      "description": null,
+      "context": "/document/description",
+      "defaultLanguageCode": "en",
+      "maxKeyPhraseCount": null,
+      "modelVersion": null,
+      "inputs": [
+        {
+          "name": "text",
+          "source": "/document/description"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "keyPhrases",
+          "targetName": "keyphrases"
+        }
+      ]
+    }
+  ],
+  "cognitiveServices": {
+    "@odata.type": "#Microsoft.Azure.Search.CognitiveServicesByKey",
+    "description": "/subscriptions/b9f82e0c-13dc-45aa-9811-b2b94b7ffdd1/resourceGroups/DefaultResourceGroup-eastus2/providers/Microsoft.CognitiveServices/accounts/cogni-service",
+    "key": "e6b7f43761b04439886fbb6a2628d5bc"
+  },
+  "knowledgeStore": null,
+  "indexProjections": null,
+  "encryptionKey": null
+}

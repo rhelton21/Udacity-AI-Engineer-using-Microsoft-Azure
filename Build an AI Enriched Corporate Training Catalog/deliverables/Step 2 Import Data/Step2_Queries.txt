@@ -1,0 +1,268 @@
+Query 1: Azure Table Index-------------------------------------------------------------------------
+search=Robert
+{
+  "@odata.context": "https://uda-cog-search.search.windows.net/indexes('courses-index')/$metadata#docs(*)",
+  "value": [
+    {
+      "@search.score": 0.62191015,
+      "Timestamp": "2023-11-24T00:40:09.547Z",
+      "Key": "company-moodle3cbb3800-2554-4121-bb3a-f365deb0c3b6",
+      "description": "Learn our best practices for various tools such as Leaflet",
+      "duration": 2,
+      "instructor": "Robert Gillis",
+      "level": "intermediate",
+      "product": "leaflet",
+      "rating_average": 3.9,
+      "rating_count": 28,
+      "role": "developer",
+      "source": "Company Moodle",
+      "title": "Maps",
+      "url": "https://www.example.com/course6",
+      "keyphrases": [
+        "best practices",
+        "various tools",
+        "Leaflet"
+      ]
+    }
+  ]
+}
+
+GET--> https://uda-cog-search.search.windows.net/indexes/courses-index/docs?api-version=2023-07-01-Preview&search=Robert
+{
+  "@odata.context": "https://uda-cog-search.search.windows.net/indexes('courses-index')/$metadata#docs(*)",
+  "value": [
+    {
+      "@search.score": 0.62191015,
+      "Timestamp": "2023-11-24T00:40:09.547Z",
+      "Key": "company-moodle3cbb3800-2554-4121-bb3a-f365deb0c3b6",
+      "description": "Learn our best practices for various tools such as Leaflet",
+      "duration": 2.0,
+      "instructor": "Robert Gillis",
+      "level": "intermediate",
+      "product": "leaflet",
+      "rating_average": 3.9,
+      "rating_count": 28.0,
+      "role": "developer",
+      "source": "Company Moodle",
+      "title": "Maps",
+      "url": "https://www.example.com/course6",
+      "keyphrases": ["best practices", "various tools", "Leaflet"]
+    }
+  ]
+}
+
+Query 2: Azure Table Index-------------------------------------------------------------------------
+search=title="Automate Node.js deployments with Azure Pipelines"
+{
+  "@odata.context": "https://uda-cog-search.search.windows.net/indexes('courses-index')/$metadata#docs(*)",
+  "value": [
+    {
+      "@search.score": 15.603099,
+      "Timestamp": "2023-11-24T00:40:06.773Z",
+      "Key": "ms-learn273a7231-bbc2-4bb4-b6e1-fd46081f166d",
+      "description": "Implement CI/CD pipeline for Node.js applications. Automate deployment of Vue, React, Angular or webpack apps with Azure Pipelines.",
+      "duration": 44,
+      "instructor": null,
+      "level": "beginner",
+      "product": "azure",
+      "rating_average": 4.9,
+      "rating_count": 41,
+      "role": "devops-engineer",
+      "source": "MS Learn",
+      "title": "Automate Node.js deployments with Azure Pipelines",
+      "url": "https://docs.microsoft.com/en-us/learn/modules/deploy-nodejs/?WT.mc_id=api_CatalogApi",
+      "keyphrases": [
+        "Node.js applications",
+        "CI/CD pipeline",
+        "webpack apps",
+        "Azure Pipelines",
+        "deployment",
+        "Vue",
+        "React",
+        "Angular"
+      ]
+    },
+    {
+      "@search.score": 14.56736,
+      "Timestamp": "2023-11-24T00:40:06.774Z",
+      "Key": "ms-learndebf6a09-ab8c-4954-a8db-4ab5141b633c",
+      "description": "Implement CI/CD pipeline for Node.js applications. Automate deployment of Vue, React, Angular or webpack apps with Azure Pipelines.",
+      "duration": 44,
+      "instructor": null,
+      "level": "beginner",
+      "product": "azure",
+      "rating_average": 4.9,
+      "rating_count": 41,
+      "role": "developer",
+      "source": "MS Learn",
+      "title": "Automate Node.js deployments with Azure Pipelines",
+      "url": "https://docs.microsoft.com/en-us/learn/modules/deploy-nodejs/?WT.mc_id=api_CatalogApi",
+      "keyphrases": [
+        "Node.js applications",
+        "CI/CD pipeline",
+        "webpack apps",
+        "Azure Pipelines",
+        "deployment",
+        "Vue",
+        "React",
+        "Angular"
+      ]
+    },
+    {
+      "@search.score": 14.36144,
+      "Timestamp": "2023-11-24T00:40:06.774Z",
+      "Key": "ms-learn025d928d-026f-4bc9-bff6-f7f3229667c1",
+      "description": "Implement CI/CD pipeline for Node.js applications. Automate deployment of Vue, React, Angular or webpack apps with Azure Pipelines.",
+      "duration": 44,
+      "instructor": null,
+      "level": "beginner",
+      "product": "azure",
+      "rating_average": 4.9,
+      "rating_count": 41,
+      "role": "solution-architect",
+      "source": "MS Learn",
+      "title": "Automate Node.js deployments with Azure Pipelines",
+      "url": "https://docs.microsoft.com/en-us/learn/modules/deploy-nodejs/?WT.mc_id=api_CatalogApi",
+      "keyphrases": [
+        "Node.js applications",
+        "CI/CD pipeline",
+        "webpack apps",
+        "Azure Pipelines",
+        "deployment",
+        "Vue",
+        "React",
+        "Angular"
+      ]
+    },
+    {
+      "@search.score": 13.757514,
+      "Timestamp": "2023-11-24T00:40:06.774Z",
+      "Key": "ms-learnfa6fa731-db7c-4d6b-80e1-3fbc104ed768",
+      "description": "Implement CI/CD pipeline for Node.js applications. Automate deployment of Vue, React, Angular or webpack apps with Azure Pipelines.",
+      "duration": 44,
+      "instructor": null,
+      "level": "beginner",
+      "product": "azure-devops",
+      "rating_average": 4.9,
+      "rating_count": 41,
+      "role": "solution-architect",
+      "source": "MS Learn",
+      "title": "Automate Node.js deployments with Azure Pipelines",
+      "url": "https://docs.microsoft.com/en-us/learn/modules/deploy-nodejs/?WT.mc_id=api_CatalogApi",
+      "keyphrases": [
+        "Node.js applications",
+        "CI/CD pipeline",
+        "webpack apps",
+        "Azure Pipelines",
+        "deployment",
+        "Vue",
+        "React",
+        "Angular"
+      ]
+    },
+    {
+      "@search.score": 12.769144,
+      "Timestamp": "2023-11-24T00:40:06.774Z",
+      "Key": "ms-learn0f8e5c1d-9d71-4442-87f7-021140c90158",
+      "description": "Implement CI/CD pipeline for Node.js applications. Automate deployment of Vue, React, Angular or webpack apps with Azure Pipelines.",
+      "duration": 44,
+      "instructor": null,
+      "level": "beginner",
+      "product": "azure-devops",
+      "rating_average": 4.9,
+      "rating_count": 41,
+      "role": "administrator",
+      "source": "MS Learn",
+      "title": "Automate Node.js deployments with Azure Pipelines",
+      "url": "https://docs.microsoft.com/en-us/learn/modules/deploy-nodejs/?WT.mc_id=api_CatalogApi",
+      "keyphrases": [
+        "Node.js applications",
+        "CI/CD pipeline",
+        "webpack apps",
+        "Azure Pipelines",
+        "deployment",
+        "Vue",
+        "React",
+        "Angular"
+      ]
+    },
+    {
+      "@search.score": 12.769144,
+      "Timestamp": "2023-11-24T00:40:06.774Z",
+      "Key": "ms-learn87ebc202-2fac-4c4b-a557-c74b774a1848",
+      "description": "Implement CI/CD pipeline for Node.js applications. Automate deployment of Vue, React, Angular or webpack apps with Azure Pipelines.",
+      "duration": 44,
+      "instructor": null,
+      "level": "beginner",
+      "product": "azure-devops",
+      "rating_average": 4.9,
+      "rating_count": 41,
+      "role": "developer",
+      "source": "MS Learn",
+      "title": "Automate Node.js deployments with Azure Pipelines",
+      "url": "https://docs.microsoft.com/en-us/learn/modules/deploy-nodejs/?WT.mc_id=api_CatalogApi",
+      "keyphrases": [
+        "Node.js applications",
+        "CI/CD pipeline",
+        "webpack apps",
+        "Azure Pipelines",
+        "deployment",
+        "Vue",
+        "React",
+        "Angular"
+      ]
+    },
+    {
+      "@search.score": 11.876615,
+      "Timestamp": "2023-11-24T00:40:06.774Z",
+      "Key": "ms-learn23d8ac5b-0e98-4013-b001-7c8a3d69dca2",
+      "description": "Implement CI/CD pipeline for Node.js applications. Automate deployment of Vue, React, Angular or webpack apps with Azure Pipelines.",
+      "duration": 44,
+      "instructor": null,
+      "level": "beginner",
+      "product": "azure",
+      "rating_average": 4.9,
+      "rating_count": 41,
+      "role": "administrator",
+      "source": "MS Learn",
+      "title": "Automate Node.js deployments with Azure Pipelines",
+      "url": "https://docs.microsoft.com/en-us/learn/modules/deploy-nodejs/?WT.mc_id=api_CatalogApi",
+      "keyphrases": [
+        "Node.js applications",
+        "CI/CD pipeline",
+        "webpack apps",
+        "Azure Pipelines",
+        "deployment",
+        "Vue",
+        "React",
+        "Angular"
+      ]
+    },
+    {
+      "@search.score": 11.876615,
+      "Timestamp": "2023-11-24T00:40:06.773Z",
+      "Key": "ms-learn4549ad74-9fbe-4924-8936-a033da90fb8f",
+      "description": "Implement CI/CD pipeline for Node.js applications. Automate deployment of Vue, React, Angular or webpack apps with Azure Pipelines.",
+      "duration": 44,
+      "instructor": null,
+      "level": "beginner",
+      "product": "azure-devops",
+      "rating_average": 4.9,
+      "rating_count": 41,
+      "role": "devops-engineer",
+      "source": "MS Learn",
+      "title": "Automate Node.js deployments with Azure Pipelines",
+      "url": "https://docs.microsoft.com/en-us/learn/modules/deploy-nodejs/?WT.mc_id=api_CatalogApi",
+      "keyphrases": [
+        "Node.js applications",
+        "CI/CD pipeline",
+        "webpack apps",
+        "Azure Pipelines",
+        "deployment",
+        "Vue",
+        "React",
+        "Angular"
+      ]
+    }
+  ]
+}

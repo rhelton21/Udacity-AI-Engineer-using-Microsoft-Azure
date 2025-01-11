@@ -1,0 +1,397 @@
+# Query 1----------------------------------------------------------------------------------------
+GET --> https://uda-cog-search.search.windows.net/indexes/courses-index/docs?api-version=2023-07-01-Preview&search=web service&$filter=search.in(role, 'data-scientist', '|') and duration lt 20&$skip=1&$top=2
+{
+  "@odata.context": "https://uda-cog-search.search.windows.net/indexes('courses-index')/$metadata#docs(*)",
+  "value": [
+    {
+      "@search.score": 10.563569,
+      "Timestamp": "2023-11-24T00:40:07.82Z",
+      "Key": "ms-learn90f26b90-378d-49f3-b22d-f681e38e76e7",
+      "description": "Use containers for your Language Understanding Intelligent Service (LUIS) Apps",
+      "duration": 18.0,
+      "instructor": null,
+      "level": "advanced",
+      "product": "azure",
+      "rating_average": 4.75,
+      "rating_count": 137.0,
+      "role": "data-scientist",
+      "source": "MS Learn",
+      "title": "Use containers for your Language Understanding Intelligent Service (LUIS) Apps",
+      "url": "https://docs.microsoft.com/en-us/learn/modules/use-containers-language-understanding-intelligent-service-apps/?WT.mc_id=api_CatalogApi",
+      "keyphrases": [
+        "Language Understanding Intelligent Service",
+        "LUIS) Apps",
+        "containers"
+      ]
+    },
+    {
+      "@search.score": 8.793198,
+      "Timestamp": "2023-11-24T00:40:07.82Z",
+      "Key": "ms-learna72bbe5a-cb74-4cb7-a477-e8a3fc06c608",
+      "description": "Use containers for your Language Understanding Intelligent Service (LUIS) Apps",
+      "duration": 18.0,
+      "instructor": null,
+      "level": "advanced",
+      "product": "azure-cognitive-services",
+      "rating_average": 4.75,
+      "rating_count": 137.0,
+      "role": "data-scientist",
+      "source": "MS Learn",
+      "title": "Use containers for your Language Understanding Intelligent Service (LUIS) Apps",
+      "url": "https://docs.microsoft.com/en-us/learn/modules/use-containers-language-understanding-intelligent-service-apps/?WT.mc_id=api_CatalogApi",
+      "keyphrases": [
+        "Language Understanding Intelligent Service",
+        "LUIS) Apps",
+        "containers"
+      ]
+    }
+  ]
+}
+# Query 2----------------------------------------------------------------------------------------
+*&$select=title,rating_average,instructor,role,level&facetrole&$filter=instructor ne 'na'&$orderby=rating_average
+{
+  "@odata.context": "https://uda-cog-search.search.windows.net/indexes('courses-index')/$metadata#docs(*)",
+  "value": [
+    {
+      "@search.score": 4.3087144,
+      "Timestamp": "2023-11-24T00:40:09.549Z",
+      "Key": "company-moodle6b5d3f55-eb02-499d-9775-2e0e25659e07",
+      "description": "Learn our company's Principles for the Responsible Use of AI",
+      "duration": 1,
+      "instructor": "Eileen Diaz",
+      "level": "intermediate",
+      "product": "NA",
+      "rating_average": 4.3,
+      "rating_count": 24,
+      "role": "architect",
+      "source": "Company Moodle",
+      "title": "Ethics in AI",
+      "url": "https://www.example.com/course12",
+      "keyphrases": [
+        "Responsible Use",
+        "company",
+        "Principles",
+        "AI"
+      ]
+    },
+    {
+      "@search.score": 4.2808766,
+      "Timestamp": "2023-11-24T00:40:09.548Z",
+      "Key": "company-moodlec014cf36-2a83-4ded-bfe5-d62f405ba970",
+      "description": "This course will teach you best practices for communicating with your team while working remotely",
+      "duration": 1,
+      "instructor": "Gerald Dominguez",
+      "level": "beginner",
+      "product": "NA",
+      "rating_average": 4.7,
+      "rating_count": 325,
+      "role": "all",
+      "source": "Company Moodle",
+      "title": "Remote work",
+      "url": "https://www.example.com/course11",
+      "keyphrases": [
+        "best practices",
+        "course",
+        "team"
+      ]
+    },
+    {
+      "@search.score": 4.2808766,
+      "Timestamp": "2023-11-24T00:40:09.549Z",
+      "Key": "company-moodlec6b7fbd0-7390-4370-ab77-45027596b520",
+      "description": "Understand ways you can be more healthy in the work environment including what ergonomic equipment is available to you",
+      "duration": 1,
+      "instructor": "Mike Montoya",
+      "level": "beginner",
+      "product": "NA",
+      "rating_average": 4.6,
+      "rating_count": 525,
+      "role": "all",
+      "source": "Company Moodle",
+      "title": "Workplace Health",
+      "url": "https://www.example.com/course13",
+      "keyphrases": [
+        "work environment",
+        "ergonomic equipment",
+        "ways"
+      ]
+    },
+    {
+      "@search.score": 4.182934,
+      "Timestamp": "2023-11-24T00:40:09.547Z",
+      "Key": "company-moodle5b293283-81e6-4f89-a0ab-7053988d6f6a",
+      "description": "Learn how to track billable and non-billable hours by assigning time to projects and other relevant time codes",
+      "duration": 1,
+      "instructor": "Mike Montoya",
+      "level": "beginner",
+      "product": "NA",
+      "rating_average": 4.8,
+      "rating_count": 540,
+      "role": "all",
+      "source": "Company Moodle",
+      "title": "Onboarding - Time Tracking",
+      "url": "https://www.example.com/course1",
+      "keyphrases": [
+        "other relevant time codes",
+        "non-billable hours",
+        "projects"
+      ]
+    },
+    {
+      "@search.score": 4.182934,
+      "Timestamp": "2023-11-24T00:40:09.549Z",
+      "Key": "company-moodle9df844fd-eefe-4880-8341-936732174bb5",
+      "description": "Learn our policies for utilizing encryption including key management for projects",
+      "duration": 3,
+      "instructor": "Eileen Diaz",
+      "level": "advanced",
+      "product": "NA",
+      "rating_average": 4.2,
+      "rating_count": 95,
+      "role": "architect",
+      "source": "Company Moodle",
+      "title": "Encryption and security",
+      "url": "https://www.example.com/course14",
+      "keyphrases": [
+        "key management",
+        "policies",
+        "encryption",
+        "projects"
+      ]
+    },
+    {
+      "@search.score": 4.071783,
+      "Timestamp": "2023-11-24T00:40:09.547Z",
+      "Key": "company-moodle30e3c6e5-9415-4d85-8229-c2133203c535",
+      "description": "Learn the policies related to the distribution and use of computers, phones, software, and other technology",
+      "duration": 1,
+      "instructor": "Mike Montoya",
+      "level": "beginner",
+      "product": "NA",
+      "rating_average": 4.9,
+      "rating_count": 550,
+      "role": "all",
+      "source": "Company Moodle",
+      "title": "Onboarding - Technology Policies",
+      "url": "https://www.example.com/course2",
+      "keyphrases": [
+        "other technology",
+        "policies",
+        "distribution",
+        "use",
+        "computers",
+        "phones",
+        "software"
+      ]
+    },
+    {
+      "@search.score": 4.071783,
+      "Timestamp": "2023-11-24T00:40:09.548Z",
+      "Key": "company-moodled3f0c955-ac6e-4ced-b91b-ffcef3e8cede",
+      "description": "For developers, learn our best practices for writing secure code for web, server, and desktop development",
+      "duration": 3,
+      "instructor": "Eileen Diaz",
+      "level": "intermediate",
+      "product": "NA",
+      "rating_average": 4.4,
+      "rating_count": 132,
+      "role": "developer",
+      "source": "Company Moodle",
+      "title": "Code security",
+      "url": "https://www.example.com/course9",
+      "keyphrases": [
+        "best practices",
+        "secure code",
+        "desktop development",
+        "developers",
+        "web",
+        "server"
+      ]
+    }
+  ]
+}
+# Query 3----------------------------------------------------------------------------------------
+GET --> https://uda-cog-search.search.windows.net/indexes/courses-index/docs?api-version=2023-07-01-Preview&search=search=AI&$filter=role eq 'business-user' and duration lt 11&$top=5
+
+{
+  "@odata.context": "https://uda-cog-search.search.windows.net/indexes('courses-index')/$metadata#docs(*)",
+  "value": [
+    {
+      "@search.score": 7.3944745,
+      "Timestamp": "2023-11-24T00:40:09.361Z",
+      "Key": "ms-learn13636881-10bb-406c-a7a0-4e77a1e37d5a",
+      "description": "Learn the basics of invoice processing in AI Builder and how it can benefit your organization.",
+      "duration": 10.0,
+      "instructor": null,
+      "level": "beginner",
+      "product": "ai-builder",
+      "rating_average": 4.81,
+      "rating_count": 21.0,
+      "role": "business-user",
+      "source": "MS Learn",
+      "title": "Get started with invoice processing in AI Builder",
+      "url": "https://docs.microsoft.com/en-us/learn/modules/ai-builder-invoice-processing/?WT.mc_id=api_CatalogApi",
+      "keyphrases": [
+        "invoice processing",
+        "AI Builder",
+        "basics",
+        "organization"
+      ]
+    },
+    {
+      "@search.score": 4.7751503,
+      "Timestamp": "2023-11-24T00:40:09.361Z",
+      "Key": "ms-learn93b29362-94c3-48c7-ae58-ddd3c84e566b",
+      "description": "Learn the basics of invoice processing in AI Builder and how it can benefit your organization.",
+      "duration": 10.0,
+      "instructor": null,
+      "level": "beginner",
+      "product": "power-platform",
+      "rating_average": 4.81,
+      "rating_count": 21.0,
+      "role": "business-user",
+      "source": "MS Learn",
+      "title": "Get started with invoice processing in AI Builder",
+      "url": "https://docs.microsoft.com/en-us/learn/modules/ai-builder-invoice-processing/?WT.mc_id=api_CatalogApi",
+      "keyphrases": [
+        "invoice processing",
+        "AI Builder",
+        "basics",
+        "organization"
+      ]
+    },
+    {
+      "@search.score": 4.6288576,
+      "Timestamp": "2023-11-24T00:40:09.361Z",
+      "Key": "ms-learneb6da14f-d124-4af4-93a2-6b220d17b481",
+      "description": "Learn the basics of invoice processing in AI Builder and how it can benefit your organization.",
+      "duration": 10.0,
+      "instructor": null,
+      "level": "beginner",
+      "product": "power-automate",
+      "rating_average": 4.81,
+      "rating_count": 21.0,
+      "role": "business-user",
+      "source": "MS Learn",
+      "title": "Get started with invoice processing in AI Builder",
+      "url": "https://docs.microsoft.com/en-us/learn/modules/ai-builder-invoice-processing/?WT.mc_id=api_CatalogApi",
+      "keyphrases": [
+        "invoice processing",
+        "AI Builder",
+        "basics",
+        "organization"
+      ]
+    }
+  ]
+}
+# Query 4----------------------------------------------------------------------------------------
+GET -->https://uda-cog-search.search.windows.net/indexes/courses-index/docs?api-version=2023-07-01-Preview&search=Azure&$select=description,duration,rating_average,level,role,title,source,rating_count&$filter=(rating_average gt 4.5 and rating_count gt 5000)&$orderby=rating_average&$top=5
+{
+  "@odata.context": "https://uda-cog-search.search.windows.net/indexes('courses-index')/$metadata#docs(*)",
+  "value": [
+    {
+      "@search.score": 7.3944745,
+      "Timestamp": "2023-11-24T00:40:09.361Z",
+      "Key": "ms-learn13636881-10bb-406c-a7a0-4e77a1e37d5a",
+      "description": "Learn the basics of invoice processing in AI Builder and how it can benefit your organization.",
+      "duration": 10.0,
+      "instructor": null,
+      "level": "beginner",
+      "product": "ai-builder",
+      "rating_average": 4.81,
+      "rating_count": 21.0,
+      "role": "business-user",
+      "source": "MS Learn",
+      "title": "Get started with invoice processing in AI Builder",
+      "url": "https://docs.microsoft.com/en-us/learn/modules/ai-builder-invoice-processing/?WT.mc_id=api_CatalogApi",
+      "keyphrases": [
+        "invoice processing",
+        "AI Builder",
+        "basics",
+        "organization"
+      ]
+    },
+    {
+      "@search.score": 4.7751503,
+      "Timestamp": "2023-11-24T00:40:09.361Z",
+      "Key": "ms-learn93b29362-94c3-48c7-ae58-ddd3c84e566b",
+      "description": "Learn the basics of invoice processing in AI Builder and how it can benefit your organization.",
+      "duration": 10.0,
+      "instructor": null,
+      "level": "beginner",
+      "product": "power-platform",
+      "rating_average": 4.81,
+      "rating_count": 21.0,
+      "role": "business-user",
+      "source": "MS Learn",
+      "title": "Get started with invoice processing in AI Builder",
+      "url": "https://docs.microsoft.com/en-us/learn/modules/ai-builder-invoice-processing/?WT.mc_id=api_CatalogApi",
+      "keyphrases": [
+        "invoice processing",
+        "AI Builder",
+        "basics",
+        "organization"
+      ]
+    },
+    {
+      "@search.score": 4.6288576,
+      "Timestamp": "2023-11-24T00:40:09.361Z",
+      "Key": "ms-learneb6da14f-d124-4af4-93a2-6b220d17b481",
+      "description": "Learn the basics of invoice processing in AI Builder and how it can benefit your organization.",
+      "duration": 10.0,
+      "instructor": null,
+      "level": "beginner",
+      "product": "power-automate",
+      "rating_average": 4.81,
+      "rating_count": 21.0,
+      "role": "business-user",
+      "source": "MS Learn",
+      "title": "Get started with invoice processing in AI Builder",
+      "url": "https://docs.microsoft.com/en-us/learn/modules/ai-builder-invoice-processing/?WT.mc_id=api_CatalogApi",
+      "keyphrases": [
+        "invoice processing",
+        "AI Builder",
+        "basics",
+        "organization"
+      ]
+    }
+  ]
+}
+# Query 5----------------------------------------------------------------------------------------
+GET --> https://uda-cog-search.search.windows.net/indexes/courses-index/docs?api-version=2023-07-01-Preview&search=*&$select=description,duration,rating_average,level,role,title,source&$filter=(rating_average gt 4.9 and level eq 'intermediate')
+{
+  "@odata.context": "https://uda-cog-search.search.windows.net/indexes('courses-index')/$metadata#docs(*)",
+  "value": [
+    {
+      "@search.score": 1.0,
+      "description": "Create an Azure Cognitive Search solution",
+      "duration": 63.0,
+      "level": "intermediate",
+      "rating_average": 4.91,
+      "role": "developer",
+      "source": "MS Learn",
+      "title": "Create an Azure Cognitive Search solution"
+    },
+    {
+      "@search.score": 1.0,
+      "description": "Create an Azure Cognitive Search solution",
+      "duration": 63.0,
+      "level": "intermediate",
+      "rating_average": 4.91,
+      "role": "solution-architect",
+      "source": "MS Learn",
+      "title": "Create an Azure Cognitive Search solution"
+    },
+    {
+      "@search.score": 1.0,
+      "description": "Create an Azure Cognitive Search solution",
+      "duration": 63.0,
+      "level": "intermediate",
+      "rating_average": 4.91,
+      "role": "ai-engineer",
+      "source": "MS Learn",
+      "title": "Create an Azure Cognitive Search solution"
+    }
+  ]
+}
+

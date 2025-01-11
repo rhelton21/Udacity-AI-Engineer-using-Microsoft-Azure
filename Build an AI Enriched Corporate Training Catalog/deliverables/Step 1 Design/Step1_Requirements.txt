@@ -1,0 +1,50 @@
+Project Overview 
+
+
+### Detailed Search Requirements for Course Data
+
+1. Users can search course data by keywords and phrases extracted from course titles and descriptions.
+
+2. Users can filter course data based on course duration, ratings, and rating count.
+
+3. Users can facet course data by source (Microsoft, Udacity, Internal), course type (Module, Nanodegree, Internal), and role.
+
+4. Users can sort course data results by fields such as title, level, technology, role, popularity, rating, and duration.
+
+5. Users can view instructor profiles in the search results for internal courses.
+
+6. Users can search for courses based on technology topics covered.
+
+7. Users can access the URL of the course directly from the search results.
+
+8. Users can view and filter internal course reviews within search results.
+
+### Detailed Search Requirements for Curated Library
+
+1. Users can search within curated PDF articles using OCR (Optical Character Recognition) for keywords and phrases.
+
+2. Users can search the curated library by author names and their associated institutions.
+
+3. Users can filter search results in the curated library by publication name, publisher, and publication date.
+
+4. Users can access the DOI URL for each article directly from the search results.
+
+### Data Enrichment Requirements
+
+1. Course data should include AI-enriched information, such as inferred skills from course descriptions.
+
+2. Curated library articles should be enriched with metadata extraction for elements like author names, institutions, publication name, and dates.
+
+### Additional Functional Requirements
+
+1. The search solution should provide a user-friendly interface for complex queries, allowing combinations of filters and facets.
+
+2. The system should ensure high-performance search capabilities, even with a large dataset.
+
+3. The interface should be intuitive and accessible, catering to a diverse range of technical skill levels among users.
+
+4. Search results should be presented in a clear, concise manner, highlighting key information for quick scanning by users.
+
+5. There should be an option for users to provide feedback on the relevance and quality of search results.
+
+6. Ensure data privacy and security, especially for internal course data and user interactions with the system.

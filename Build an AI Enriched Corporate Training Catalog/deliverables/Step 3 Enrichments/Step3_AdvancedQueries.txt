@@ -1,0 +1,343 @@
+Query 1 =======================================================================================================
+GET --> https://uda-cog-search.search.windows.net/indexes/courses-index/docs?api-version=2023-07-01-Preview&search=instructor='Mike Montoya'
+{
+  "@odata.context": "https://uda-cog-search.search.windows.net/indexes('courses-index')/$metadata#docs(*)",
+  "value": [
+    {
+      "@search.score": 5.875056,
+      "Timestamp": "2023-11-24T00:40:09.547Z",
+      "Key": "company-moodle30e3c6e5-9415-4d85-8229-c2133203c535",
+      "description": "Learn the policies related to the distribution and use of computers, phones, software, and other technology",
+      "duration": 1.0,
+      "instructor": "Mike Montoya",
+      "level": "beginner",
+      "product": "NA",
+      "rating_average": 4.9,
+      "rating_count": 550.0,
+      "role": "all",
+      "source": "Company Moodle",
+      "title": "Onboarding - Technology Policies",
+      "url": "https://www.example.com/course2",
+      "keyphrases": ["other technology", "policies", "distribution", "use", "computers", "phones", "software"],
+      "entities": [
+        {
+          "name": "Mike Montoya",
+          "description": "Mike  is our HR trainer responsible for helping employees be successful in their careers at our company.  He has been with us for 3 years. Mike is an amateur chef and enjoys outdoor live music events."
+        }
+      ]
+    },
+    {
+      "@search.score": 3.380168,
+      "Timestamp": "2023-11-24T00:40:09.547Z",
+      "Key": "company-moodle5b293283-81e6-4f89-a0ab-7053988d6f6a",
+      "description": "Learn how to track billable and non-billable hours by assigning time to projects and other relevant time codes",
+      "duration": 1.0,
+      "instructor": "Mike Montoya",
+      "level": "beginner",
+      "product": "NA",
+      "rating_average": 4.8,
+      "rating_count": 540.0,
+      "role": "all",
+      "source": "Company Moodle",
+      "title": "Onboarding - Time Tracking",
+      "url": "https://www.example.com/course1",
+      "keyphrases": ["other relevant time codes", "non-billable hours", "projects"],
+      "entities": [
+        {
+          "name": "Mike Montoya",
+          "description": "Mike  is our HR trainer responsible for helping employees be successful in their careers at our company.  He has been with us for 3 years. Mike is an amateur chef and enjoys outdoor live music events."
+        }
+      ]
+    },
+    {
+      "@search.score": 3.3711424,
+      "Timestamp": "2023-11-24T00:40:09.549Z",
+      "Key": "company-moodlec6b7fbd0-7390-4370-ab77-45027596b520",
+      "description": "Understand ways you can be more healthy in the work environment including what ergonomic equipment is available to you",
+      "duration": 1.0,
+      "instructor": "Mike Montoya",
+      "level": "beginner",
+      "product": "NA",
+      "rating_average": 4.6,
+      "rating_count": 525.0,
+      "role": "all",
+      "source": "Company Moodle",
+      "title": "Workplace Health",
+      "url": "https://www.example.com/course13",
+      "keyphrases": ["work environment", "ergonomic equipment", "ways"],
+      "entities": [
+        {
+          "name": "Mike Montoya",
+          "description": "Mike  is our HR trainer responsible for helping employees be successful in their careers at our company.  He has been with us for 3 years. Mike is an amateur chef and enjoys outdoor live music events."
+        }
+      ]
+    }
+  ]
+}
+Query 2 =======================================================================================================
+GET --> https://uda-cog-search.search.windows.net/indexes/courses-index/docs?api-version=2023-07-01-Preview&search=leaflet&$select=title, instructor, duration, source, role, entities&$count=true&$top=2
+{
+  "@odata.context": "https://uda-cog-search.search.windows.net/indexes('courses-index')/$metadata#docs(*)",
+  "@odata.count": 1,
+  "value": [
+    {
+      "@search.score": 9.569932,
+      "duration": 2.0,
+      "instructor": "Robert Gillis",
+      "role": "developer",
+      "source": "Company Moodle",
+      "title": "Maps",
+      "entities": [
+        {
+          "name": "Robert Gillis",
+          "description": "Robert is our GIS specialist in charge of making beautiful maps for our users. He has been with the company for 8 years and enjoys hiking, fishing, and any other outdoor activity."
+        }
+      ]
+    }
+  ]
+}
+
+Query 3 =======================================================================================================
+GET->https://uda-cog-search.search.windows.net/indexes/courses-index/docs?api-version=2023-07-01-Preview&search=*&$select=instructor, entities, title, duration, source, role&$filter=instructor ne null&$count=true&$top=7&$orderby=duration asc
+{
+  "@odata.context": "https://uda-cog-search.search.windows.net/indexes('courses-index')/$metadata#docs(*)",
+  "@odata.count": 14,
+  "value": [
+    {
+      "@search.score": 1.0,
+      "duration": 1.0,
+      "instructor": "Mike Montoya",
+      "role": "all",
+      "source": "Company Moodle",
+      "title": "Onboarding - Technology Policies",
+      "entities": [
+        {
+          "name": "Mike Montoya",
+          "description": "Mike is our HR trainer responsible for helping employees be successful in their careers at our company. He has been with us for 3 years. Mike is an amateur chef and enjoys outdoor live music events."
+        }
+      ]
+    },
+    {
+      "@search.score": 1.0,
+      "duration": 1.0,
+      "instructor": "Gerald Dominguez",
+      "role": "all",
+      "source": "Company Moodle",
+      "title": "Remote work",
+      "entities": [
+        {
+          "name": "Gerald Dominguez",
+          "description": "Gerald is a Junior IT Administrator and has been with the company for 1 year. Gerald played NCAA soccer and is a part-time soccer coach on weekends."
+        }
+      ]
+    },
+    {
+      "@search.score": 1.0,
+      "duration": 1.0,
+      "instructor": "Mike Montoya",
+      "role": "all",
+      "source": "Company Moodle",
+      "title": "Workplace Health",
+      "entities": [
+        {
+          "name": "Mike Montoya",
+          "description": "Mike is our HR trainer responsible for helping employees be successful in their careers at our company. He has been with us for 3 years. Mike is an amateur chef and enjoys outdoor live music events."
+        }
+      ]
+    },
+    {
+      "@search.score": 1.0,
+      "duration": 1.0,
+      "instructor": "Eileen Diaz",
+      "role": "architect",
+      "source": "Company Moodle",
+      "title": "Ethics in AI",
+      "entities": [
+        {
+          "name": "Eileen Diaz",
+          "description": "Eileen is our Senior Security Engineer responsible for application and service security. She has been with the company for 9 years and enjoys writing Sci-Fi in her spare time."
+        }
+      ]
+    },
+    {
+      "@search.score": 1.0,
+      "duration": 1.0,
+      "instructor": "Mike Montoya",
+      "role": "all",
+      "source": "Company Moodle",
+      "title": "Onboarding - Time Tracking",
+      "entities": [
+        {
+          "name": "Mike Montoya",
+          "description": "Mike is our HR trainer responsible for helping employees be successful in their careers at our company. He has been with us for 3 years. Mike is an amateur chef and enjoys outdoor live music events."
+        }
+      ]
+    },
+    {
+      "@search.score": 1.0,
+      "duration": 2.0,
+      "instructor": "Gerald Dominguez",
+      "role": "all",
+      "source": "Company Moodle",
+      "title": "O365",
+      "entities": [
+        {
+          "name": "Gerald Dominguez",
+          "description": "Gerald is a Junior IT Administrator and has been with the company for 1 year. Gerald played NCAA soccer and is a part-time soccer coach on weekends."
+        }
+      ]
+    },
+    {
+      "@search.score": 1.0,
+      "duration": 2.0,
+      "instructor": "Robert Gillis",
+      "role": "developer",
+      "source": "Company Moodle",
+      "title": "Maps",
+      "entities": [
+        {
+          "name": "Robert Gillis",
+          "description": "Robert is our GIS specialist in charge of making beautiful maps for our users. He has been with the company for 8 years and enjoys hiking, fishing, and any other outdoor activity."
+        }
+      ]
+    }
+  ]
+}
+
+Query 4 =======================================================================================================
+GET --> https://uda-cog-search.search.windows.net/indexes/courses-index/docs?api-version=2023-07-01-Preview&search=*&$filter=(instructor eq 'Eileen Diaz' and rating_count lt 100 )&select=description,instructor,entities
+{
+  "@odata.context": "https://uda-cog-search.search.windows.net/indexes('courses-index')/$metadata#docs(*)",
+  "value": [
+    {
+      "@search.score": 1.0,
+      "Timestamp": "2023-11-24T00:40:09.548Z",
+      "Key": "company-moodle85ee725b-4ae0-4719-8785-ddf99e19faf1",
+      "description": "For administrators, learn our best practices for securing all databases",
+      "duration": 3.0,
+      "instructor": "Eileen Diaz",
+      "level": "advanced",
+      "product": "SQL",
+      "rating_average": 4.3,
+      "rating_count": 45.0,
+      "role": "admin",
+      "source": "Company Moodle",
+      "title": "Security for database admins",
+      "url": "https://www.example.com/course8",
+      "keyphrases": ["best practices", "administrators", "databases"],
+      "entities": [
+        {
+          "name": "Eileen Diaz",
+          "description": "Eileen is our Senior Security Engineer responsible for application and service security. She has been with the company for 9 years and enjoys writing Sci-Fi in her spare time."
+        }
+      ]
+    },
+    {
+      "@search.score": 1.0,
+      "Timestamp": "2023-11-24T00:40:09.549Z",
+      "Key": "company-moodle6b5d3f55-eb02-499d-9775-2e0e25659e07",
+      "description": "Learn our company's Principles for the Responsible Use of AI",
+      "duration": 1.0,
+      "instructor": "Eileen Diaz",
+      "level": "intermediate",
+      "product": "NA",
+      "rating_average": 4.3,
+      "rating_count": 24.0,
+      "role": "architect",
+      "source": "Company Moodle",
+      "title": "Ethics in AI",
+      "url": "https://www.example.com/course12",
+      "keyphrases": ["Responsible Use", "company", "Principles", "AI"],
+      "entities": [
+        {
+          "name": "Eileen Diaz",
+          "description": "Eileen is our Senior Security Engineer responsible for application and service security. She has been with the company for 9 years and enjoys writing Sci-Fi in her spare time."
+        }
+      ]
+    },
+    {
+      "@search.score": 1.0,
+      "Timestamp": "2023-11-24T00:40:09.549Z",
+      "Key": "company-moodle9df844fd-eefe-4880-8341-936732174bb5",
+      "description": "Learn our policies for utilizing encryption including key management for projects",
+      "duration": 3.0,
+      "instructor": "Eileen Diaz",
+      "level": "advanced",
+      "product": "NA",
+      "rating_average": 4.2,
+      "rating_count": 95.0,
+      "role": "architect",
+      "source": "Company Moodle",
+      "title": "Encryption and security",
+      "url": "https://www.example.com/course14",
+      "keyphrases": ["key management", "policies", "encryption", "projects"],
+      "entities": [
+        {
+          "name": "Eileen Diaz",
+          "description": "Eileen is our Senior Security Engineer responsible for application and service security. She has been with the company for 9 years and enjoys writing Sci-Fi in her spare time."
+        }
+      ]
+    }
+  ]
+}
+
+
+
+Query 5 =======================================================================================================
+GET--> https://uda-cog-search.search.windows.net/indexes/courses-index/docs?api-version=2023-07-01-Preview&search=*&$select=description,rating_average,level,role,title,source,instructor,entities&$filter=instructor eq 'Mike Montoya'
+{
+  "@odata.context": "https://uda-cog-search.search.windows.net/indexes('courses-index')/$metadata#docs(*)",
+  "value": [
+    {
+      "@search.score": 1.0,
+      "description": "Learn the policies related to the distribution and use of computers, phones, software, and other technology",
+      "instructor": "Mike Montoya",
+      "level": "beginner",
+      "rating_average": 4.9,
+      "role": "all",
+      "source": "Company Moodle",
+      "title": "Onboarding - Technology Policies",
+      "entities": [
+        {
+          "name": "Mike Montoya",
+          "description": "Mike is our HR trainer responsible for helping employees be successful in their careers at our company. He has been with us for 3 years. Mike is an amateur chef and enjoys outdoor live music events."
+        }
+      ]
+    },
+    {
+      "@search.score": 1.0,
+      "description": "Understand ways you can be more healthy in the work environment including what ergonomic equipment is available to you",
+      "instructor": "Mike Montoya",
+      "level": "beginner",
+      "rating_average": 4.6,
+      "role": "all",
+      "source": "Company Moodle",
+      "title": "Workplace Health",
+      "entities": [
+        {
+          "name": "Mike Montoya",
+          "description": "Mike is our HR trainer responsible for helping employees be successful in their careers at our company. He has been with us for 3 years. Mike is an amateur chef and enjoys outdoor live music events."
+        }
+      ]
+    },
+    {
+      "@search.score": 1.0,
+      "description": "Learn how to track billable and non-billable hours by assigning time to projects and other relevant time codes",
+      "instructor": "Mike Montoya",
+      "level": "beginner",
+      "rating_average": 4.8,
+      "role": "all",
+      "source": "Company Moodle",
+      "title": "Onboarding - Time Tracking",
+      "entities": [
+        {
+          "name": "Mike Montoya",
+          "description": "Mike is our HR trainer responsible for helping employees be successful in their careers at our company. He has been with us for 3 years. Mike is an amateur chef and enjoys outdoor live music events."
+        }
+      ]
+    }
+  ]
+}
+
+
+

@@ -1,0 +1,34 @@
+{
+  "@odata.context": "https://uda-cog-search.search.windows.net/$metadata#indexers/$entity",
+  "@odata.etag": "\"0x8DBEFAE1BB80521\"",
+  "name": "courses-indexer",
+  "description": "",
+  "dataSourceName": "courses-data",
+  "skillsetName": "courses-skillset",
+  "targetIndexName": "courses-index",
+  "disabled": null,
+  "schedule": {
+    "interval": "PT1H",
+    "startTime": "2023-11-27T23:33:21.293Z"
+  },
+  "parameters": {
+    "batchSize": null,
+    "maxFailedItems": 0,
+    "maxFailedItemsPerBatch": 0,
+    "base64EncodeKeys": false,
+    "configuration": {}
+  },
+  "fieldMappings": [],
+  "outputFieldMappings": [
+    {
+      "sourceFieldName": "/document/description/keyphrases",
+      "targetFieldName": "keyphrases"
+    },
+    {
+      "sourceFieldName": "/document/instructor/entities",
+      "targetFieldName": "entities"
+    }
+  ],
+  "cache": null,
+  "encryptionKey": null
+}
